@@ -24,4 +24,6 @@ class Show {
 $produk1 = new produk("Tenda 4P Double Layer", "ten2pdoulay", 1, 45000);
 
 $show = new Show();
-echo $show->Show($produk1);
+$show = $show->Show($produk1);
+echo $show . "<br>";
+var_dump($show);
