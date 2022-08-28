@@ -16,9 +16,12 @@ class Produk {
 
 class Show {
     public function Show (Produk $produk){
-        $str = "{$produk->$namaBarang} | {$produk->kodeBarang} | {$produk->$jumlahBarang} | {$produk->$hargaBarang}";
+        $str = "{$produk->namaBarang} | {$produk->kodeBarang} | {$produk->jumlahBarang} | {$produk->hargaBarang}";
         return $str;
     }
 }
 
-$produk1 = new produk();
+$produk1 = new produk("Tenda 4P Double Layer", "ten2pdoulay", 1, 45000);
+
+$show = new Show();
+echo $show->Show($produk1);
