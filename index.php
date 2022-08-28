@@ -13,3 +13,12 @@ class Produk {
         $this->hargaBarang = $hargaBarang;
     }
 }
+
+class Show {
+    public function Show (Produk $produk){
+        $str = "{$produk->$namaBarang} | {$produk->kodeBarang} | {$produk->$jumlahBarang} | {$produk->$hargaBarang}";
+        return $str;
+    }
+}
+
+echo "Hello World";
