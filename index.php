@@ -6,7 +6,7 @@ class Produk {
            $jumlahBarang,
            $hargaBarang;
     
-    public function __construct (Produk $produk) {
+    public function __construct ($namaBarang, $kodeBarang, $jumlahBarang, $hargaBarang) {
         $this->namaBarang = $namaBarang;
         $this->kodeBarang = $kodeBarang;
         $this->jumlahBarang = $jumlahBarang;
@@ -21,4 +21,4 @@ class Show {
     }
 }
 
-echo "Hello World";
+$produk1 = new produk();
