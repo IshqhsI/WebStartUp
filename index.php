@@ -2,15 +2,15 @@
 
 class Produk {
     public $namaBarang, 
-           $kodeBarang,
-           $jumlahBarang,
-           $hargaBarang;
+           $kodeBarang;
 
-    public function __construct ($namaBarang, $kodeBarang, $jumlahBarang, $hargaBarang) {
+    protected $hargaBarang;
+
+    public function __construct ($namaBarang, $kodeBarang,  $hargaBarang) {
         $this->namaBarang = $namaBarang;
         $this->kodeBarang = $kodeBarang;
-        $this->jumlahBarang = $jumlahBarang;
         $this->hargaBarang = $hargaBarang;
+
     }
 
     public function getInfoProduk(Produk $produk){
@@ -21,18 +21,35 @@ class Produk {
 }
 
 class Show {
-    public function Show (Produk $produk){
+    public function Show ($produk){
         $str = "{$produk->namaBarang} | {$produk->kodeBarang} | {$produk->jumlahBarang} | {$produk->hargaBarang}";
         return $str;
     }
 }
 
 class Tenda extends Produk {
+    public $warna, $jumlahBarang;
 
+    public function __construct ($namaBarang, $kodeBarang, $warna, $jumlahBarang, $hargaBarang) {
+
+        parent::__construct($namaBarang, $kodeBarang, $hargaBarang);
+
+        $this->warna = $warna;
+        $this->jumlahBarang = $jumlahBarang;
+    }
+
+    public function getInfoProduk(Produk $produk){
+        $str = " {$this->namaBarang} | 
+                 {$this->kodeBarang} |
+                 {$this->warna} | 
+                 {$this->jumlahBarang} |  
+                 {$this->hargaBarang} ";
+        return $str;
+    }
 }
 
-$produk1 = new Tenda("Tenda 2P Double Layer", "ten2pdoulay", 1, 45000);
+$produk1 = new Tenda("Tenda 2P Double Layer", "ten2pdoulay", "Merah", 1, 45000);
 
+echo $produk1->getInfoProduk($produk1);
 
-$tes = new Tenda();
-echo $tes->getInfoProduk($produk1);
+// echo $produk1->harga;
