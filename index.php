@@ -45,10 +45,6 @@ class Tenda extends Produk {
         return $this->setHargaBarang($hargaBarang);
     }
 
-    // public function getSumHarga(){ 
-    //     $this->sumHarga = $this->getJumlahBarang() * $this->getHargaBarang();
-    // }
-
     public function __construct ($namaBarang, $kodeBarang, $warna) {
         parent::__construct($namaBarang, $kodeBarang);
         $this->warna = $warna;
