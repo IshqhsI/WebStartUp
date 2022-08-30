@@ -12,6 +12,12 @@ class Produk {
         $this->jumlahBarang = $jumlahBarang;
         $this->hargaBarang = $hargaBarang;
     }
+
+    public function getInfoProduk(Produk $produk){
+        $str = " {$this->namaBarang} | {$this->kodeBarang} | {$this->hargaBarang} ";
+        return $str;
+    } 
+
 }
 
 class Show {
@@ -21,13 +27,12 @@ class Show {
     }
 }
 
-$produk1 = new produk("Tenda 2P Double Layer", "ten2pdoulay", 1, 45000);
-$produk2 = new produk("Tenda 4P Double Layer", "ten4pdoulay", 1, 40000);
+class Tenda extends Produk {
 
-$show = new Show();
-$show = $show->Show($produk1);
-echo $show . "<br>";
+}
 
-$show = new Show();
-$show = $show->Show($produk2);
-echo $show;
+$produk1 = new Tenda("Tenda 2P Double Layer", "ten2pdoulay", 1, 45000);
+
+
+$tes = new Tenda();
+echo $tes->getInfoProduk($produk1);
