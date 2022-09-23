@@ -1,3 +1,3 @@
 # WebStartUp
-Web yang pertama dibuka saat menjalankan chrome
-Rencanaaa
+- Web yang pertama dibuka saat menjalankan chrome
+- Rencanaaa
