@@ -1,10 +1,9 @@
 <?php 
 
 class Produk {
-    public $namaBarang, 
-           $kodeBarang;
-
-    protected $hargaBarang;
+    protected $namaBarang, 
+              $kodeBarang,
+              $hargaBarang;
 
     public function __construct ($namaBarang, $kodeBarang,  $hargaBarang) {
         $this->namaBarang = $namaBarang;
